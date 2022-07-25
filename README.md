@@ -1,6 +1,5 @@
 # `Book Shelf`
-Front-end: AngularJS
-
+Front-end: AngularJS  
 Back-end: NodeJS
 
 ## How to install, run, and test AngularJS:
