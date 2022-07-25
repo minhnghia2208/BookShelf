@@ -1,4 +1,4 @@
-# `Book Shelf Craneware`
+# `Book Shelf`
 Front-end: AngularJS
 Back-end: NodeJS
 
