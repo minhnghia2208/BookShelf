@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.bookShelf', ['ngRoute'])
+angular.module('myApp.bookShelf', ['ngRoute', 'constant'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/bookshelf', {
@@ -9,9 +9,9 @@ angular.module('myApp.bookShelf', ['ngRoute'])
   });
 }])
 
-.controller('BookShelfController', ['$scope', '$http', function ($scope, $http) {
+.controller('BookShelfController', ['$scope', '$http', 'config', function ($scope, $http, config) {
   $scope.fetch = function () {
-    $http.get('http://localhost:3000/books')
+    $http.get(config.apiUrl + '/books')
     .then(function (response) { 
       $scope.books = response.data; 
     });

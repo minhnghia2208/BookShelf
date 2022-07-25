@@ -10,7 +10,8 @@ module.exports = function(config) {
       '../node_modules/angular-mocks/angular-mocks.js',
       'core/**/*.js',
       'view*/**/*.js',
-      'bookShelf/**/*.js'
+      'bookShelf/**/*.js',
+      'constant.js'
     ],
 
     autoWatch: true,

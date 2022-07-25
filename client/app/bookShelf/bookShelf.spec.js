@@ -2,13 +2,17 @@
 
 describe('myApp.bookShelf module', function() {
 
-  beforeEach(module('myApp.bookShelf'));
+  beforeEach(
+    module('myApp.bookShelf'),
+    module('constant')
+    );
 
-  var $scope, $controller, $httpBackend;
+  var $scope, $controller, $httpBackend, config;
 
-  beforeEach(inject(function(_$controller_, _$rootScope_, _$httpBackend_){
+  beforeEach(inject(function(_$controller_, _$rootScope_, _$httpBackend_, _config_){
     $scope = _$rootScope_.$new();
-    $controller = _$controller_('BookShelfController', { $scope: $scope });
+    config = _config_;
+    $controller = _$controller_('BookShelfController', { $scope: $scope, config: config });
     $httpBackend = _$httpBackend_;
   }));
 
@@ -20,7 +24,8 @@ describe('myApp.bookShelf module', function() {
           { author: 'John Doe', title: 'Lorem Ipsum'},
           { author: 'Eric Widget', title: 'Dolor Sit'}
         ]
-        $httpBackend.expectGET("http://localhost:3000/books").respond(200, httpResponse);
+        console.log(config.apiUrl);
+        $httpBackend.expectGET(config.apiUrl + "/books").respond(200, httpResponse);
         $httpBackend.flush();
         $scope.fetch();
         expect($scope.books.length).toBe(2);
