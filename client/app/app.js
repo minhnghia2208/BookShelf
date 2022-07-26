@@ -4,7 +4,7 @@ angular.module('myApp', [
   'ngRoute',
   'constant',
   'myApp.bookShelf',
-  'myApp.view2',
+  'myApp.bookAdd',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

@@ -10,6 +10,7 @@ module.exports = function(config) {
       '../node_modules/angular-mocks/angular-mocks.js',
       'core/**/*.js',
       'view*/**/*.js',
+      'bookAdd/**/*.js',
       'bookShelf/**/*.js',
       'constant.js'
     ],
