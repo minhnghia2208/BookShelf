@@ -1,18 +1,18 @@
 <div class="mt-5 text-center">
     <h2>Book Shelf</h2>
-  </div>
-  <table class="w-50 mx-auto table table-bordered">
-    <thead>
-      <tr>
-        <th class="w-50 text-center">Book Title</th>
-        <th class="w-50 text-center">Book Author</th>
-      </tr>
-    </thead>
-    <tbody ng-controller="BookShelfController">
-      <tr ng-repeat="book in books track by $index">
-        <td>{{ book.author }}</td>
-        <td>{{ book.title }}</td>
-      </tr>
-    </tbody>
-      
-  </table>
+</div>
+
+<table class="w-50 mx-auto table table-bordered">
+  <thead>
+    <tr>
+      <th class="w-50 text-center">Book Title</th>
+      <th class="w-50 text-center">Book Author</th>
+    </tr>
+  </thead>
+  <tbody ng-controller="BookShelfController">
+    <tr ng-repeat="book in books track by $index">
+      <td>{{ book.author }}</td>
+      <td>{{ book.title }}</td>
+    </tr>
+  </tbody>
+</table>
